@@ -4,6 +4,7 @@ import sqlite3
 root = Tk()
 root.title("Database with Sqlite")
 root.geometry('450x400')
+root.config(background="gold")
 
 # to create or connect to an exiting database
 dbconnect = sqlite3.connect('address_book.db')
@@ -30,7 +31,8 @@ c.execute("""CREATE TABLE addresses (
 def update_table():
     update = Tk()
     update.title("Database with Sqlite")
-    root.geometry('450x400')
+    update.geometry('450x400')
+    update.config(background="gold")
 
     # to create or connect to an exiting database
     dbconnect = sqlite3.connect('address_book.db')
@@ -222,23 +224,23 @@ f_name.grid(row="0", column="1",padx="20", pady=(10, 0))
 
 label_lname= Label(root, text="Last Name").grid(row="1", column="0")
 l_name= Entry(root, width="30")
-l_name.grid(row="1", column="1",padx="20")
+l_name.grid(row="1", column="1",padx="20", pady="5")
 
 label_address= Label(root, text="Address").grid(row="2", column="0")
 address= Entry(root, width="30")
-address.grid(row="2", column="1",padx="20")
+address.grid(row="2", column="1",padx="20", pady="5")
 
 label_city= Label(root, text="City").grid(row="3", column="0")
 city= Entry(root, width="30")
-city.grid(row="3", column="1",padx="20")
+city.grid(row="3", column="1",padx="20", pady="5")
 
 label_state= Label(root, text=" State").grid(row="4", column="0")
 state= Entry(root, width="30")
-state.grid(row="4", column="1",padx="20")
+state.grid(row="4", column="1",padx="20", pady="5")
 
 label_zipcode= Label(root, text="Zipcode").grid(row="5", column="0")
 zipcode= Entry(root, width="30")
-zipcode.grid(row="5", column="1", padx="20")
+zipcode.grid(row="5", column="1", padx="20",pady="5")
 
 
 #create a submit button
